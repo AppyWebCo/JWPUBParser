@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6490A3E32A3BF9F000C59D40 /* JWTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490A3E22A3BF9F000C59D40 /* JWTest.swift */; };
+		6490A3E72A3C9B9A00C59D40 /* MCLDeobfuscator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6490A3E52A3C9B9A00C59D40 /* MCLDeobfuscator.m */; };
+		6490A3EB2A3D629B00C59D40 /* Gzip in Frameworks */ = {isa = PBXBuildFile; productRef = 6490A3EA2A3D629B00C59D40 /* Gzip */; };
+		6490A3EE2A3E3A3D00C59D40 /* Extension+Publication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490A3ED2A3E3A3D00C59D40 /* Extension+Publication.swift */; };
+		6490A3F22A3E3D4000C59D40 /* Publication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490A3F12A3E3D4000C59D40 /* Publication.swift */; };
+		64E952DA29EE31240081C703 /* JWPUBParserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E952D929EE31240081C703 /* JWPUBParserApp.swift */; };
+		64E952DC29EE31240081C703 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E952DB29EE31240081C703 /* ContentView.swift */; };
+		64E952DE29EE31250081C703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64E952DD29EE31250081C703 /* Assets.xcassets */; };
+		64E952E129EE31250081C703 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64E952E029EE31250081C703 /* Preview Assets.xcassets */; };
+		64E952EA29EE327F0081C703 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 64E952E929EE327F0081C703 /* ZIPFoundation */; };
+		64E952EC29EE32DD0081C703 /* nwt_E.jwpub in Resources */ = {isa = PBXBuildFile; fileRef = 64E952EB29EE32DD0081C703 /* nwt_E.jwpub */; };
+		64E952EF29EF5C570081C703 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E952EE29EF5C570081C703 /* Models.swift */; };
+		64E952F229EF5D970081C703 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 64E952F129EF5D970081C703 /* SQLite */; };
+		64E952F429EF63DD0081C703 /* Manifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E952F329EF63DD0081C703 /* Manifest.swift */; };
+		64E952F629EF747A0081C703 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E952F529EF747A0081C703 /* DBService.swift */; };
+		64E952F829EF878E0081C703 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E952F729EF878E0081C703 /* Extension.swift */; };
+		64E952FB29F09AB30081C703 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 64E952FA29F09AB30081C703 /* CryptoSwift */; };
+		64E952FD29F0A1A40081C703 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E952FC29F0A1A40081C703 /* Crypto.swift */; };
+		64E9530429F4CBC80081C703 /* DataCompression in Frameworks */ = {isa = PBXBuildFile; productRef = 64E9530329F4CBC80081C703 /* DataCompression */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6490A3E22A3BF9F000C59D40 /* JWTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTest.swift; sourceTree = "<group>"; };
+		6490A3E52A3C9B9A00C59D40 /* MCLDeobfuscator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLDeobfuscator.m; sourceTree = "<group>"; };
+		6490A3E62A3C9B9A00C59D40 /* MCLDeobfuscator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLDeobfuscator.h; sourceTree = "<group>"; };
+		6490A3ED2A3E3A3D00C59D40 /* Extension+Publication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Publication.swift"; sourceTree = "<group>"; };
+		6490A3F12A3E3D4000C59D40 /* Publication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publication.swift; sourceTree = "<group>"; };
+		64E952D629EE31240081C703 /* JWPUBParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWPUBParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64E952D929EE31240081C703 /* JWPUBParserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWPUBParserApp.swift; sourceTree = "<group>"; };
+		64E952DB29EE31240081C703 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		64E952DD29EE31250081C703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		64E952E029EE31250081C703 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		64E952E229EE31250081C703 /* JWPUBParser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JWPUBParser.entitlements; sourceTree = "<group>"; };
+		64E952EB29EE32DD0081C703 /* nwt_E.jwpub */ = {isa = PBXFileReference; lastKnownFileType = file; path = nwt_E.jwpub; sourceTree = "<group>"; };
+		64E952EE29EF5C570081C703 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		64E952F329EF63DD0081C703 /* Manifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manifest.swift; sourceTree = "<group>"; };
+		64E952F529EF747A0081C703 /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
+		64E952F729EF878E0081C703 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		64E952FC29F0A1A40081C703 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		64E9530129F36CE10081C703 /* JWPUBParser-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWPUBParser-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		64E952D329EE31240081C703 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64E952F229EF5D970081C703 /* SQLite in Frameworks */,
+				6490A3EB2A3D629B00C59D40 /* Gzip in Frameworks */,
+				64E952EA29EE327F0081C703 /* ZIPFoundation in Frameworks */,
+				64E952FB29F09AB30081C703 /* CryptoSwift in Frameworks */,
+				64E9530429F4CBC80081C703 /* DataCompression in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6490A3E42A3C9B8800C59D40 /* MEPS */ = {
+			isa = PBXGroup;
+			children = (
+				6490A3E62A3C9B9A00C59D40 /* MCLDeobfuscator.h */,
+				6490A3E52A3C9B9A00C59D40 /* MCLDeobfuscator.m */,
+			);
+			path = MEPS;
+			sourceTree = "<group>";
+		};
+		6490A3EC2A3E3A1500C59D40 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6490A3ED2A3E3A3D00C59D40 /* Extension+Publication.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		64E952CD29EE31240081C703 = {
+			isa = PBXGroup;
+			children = (
+				64E9530129F36CE10081C703 /* JWPUBParser-Bridging-Header.h */,
+				64E952D829EE31240081C703 /* JWPUBParser */,
+				64E952D729EE31240081C703 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		64E952D729EE31240081C703 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64E952D629EE31240081C703 /* JWPUBParser.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64E952D829EE31240081C703 /* JWPUBParser */ = {
+			isa = PBXGroup;
+			children = (
+				6490A3EC2A3E3A1500C59D40 /* Extensions */,
+				6490A3E42A3C9B8800C59D40 /* MEPS */,
+				64E952ED29EF5C410081C703 /* models */,
+				64E952EB29EE32DD0081C703 /* nwt_E.jwpub */,
+				64E952D929EE31240081C703 /* JWPUBParserApp.swift */,
+				64E952DB29EE31240081C703 /* ContentView.swift */,
+				64E952DD29EE31250081C703 /* Assets.xcassets */,
+				64E952E229EE31250081C703 /* JWPUBParser.entitlements */,
+				64E952DF29EE31250081C703 /* Preview Content */,
+				64E952F529EF747A0081C703 /* DBService.swift */,
+				6490A3E22A3BF9F000C59D40 /* JWTest.swift */,
+				64E952F729EF878E0081C703 /* Extension.swift */,
+				64E952FC29F0A1A40081C703 /* Crypto.swift */,
+			);
+			path = JWPUBParser;
+			sourceTree = "<group>";
+		};
+		64E952DF29EE31250081C703 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				64E952E029EE31250081C703 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		64E952ED29EF5C410081C703 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				64E952EE29EF5C570081C703 /* Models.swift */,
+				64E952F329EF63DD0081C703 /* Manifest.swift */,
+				6490A3F12A3E3D4000C59D40 /* Publication.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		64E952D529EE31240081C703 /* JWPUBParser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64E952E529EE31250081C703 /* Build configuration list for PBXNativeTarget "JWPUBParser" */;
+			buildPhases = (
+				64E952D229EE31240081C703 /* Sources */,
+				64E952D329EE31240081C703 /* Frameworks */,
+				64E952D429EE31240081C703 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JWPUBParser;
+			packageProductDependencies = (
+				64E952E929EE327F0081C703 /* ZIPFoundation */,
+				64E952F129EF5D970081C703 /* SQLite */,
+				64E952FA29F09AB30081C703 /* CryptoSwift */,
+				64E9530329F4CBC80081C703 /* DataCompression */,
+				6490A3EA2A3D629B00C59D40 /* Gzip */,
+			);
+			productName = JWPUBParser;
+			productReference = 64E952D629EE31240081C703 /* JWPUBParser.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		64E952CE29EE31240081C703 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = JWP;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				ORGANIZATIONNAME = AppyWeb;
+				TargetAttributes = {
+					64E952D529EE31240081C703 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 64E952D129EE31240081C703 /* Build configuration list for PBXProject "JWPUBParser" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 64E952CD29EE31240081C703;
+			packageReferences = (
+				64E952E829EE327F0081C703 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+				64E952F029EF5D970081C703 /* XCRemoteSwiftPackageReference "SQLite" */,
+				64E952F929F09AB30081C703 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+				64E9530229F4CBC80081C703 /* XCRemoteSwiftPackageReference "DataCompression" */,
+				6490A3E92A3D629B00C59D40 /* XCRemoteSwiftPackageReference "GzipSwift" */,
+			);
+			productRefGroup = 64E952D729EE31240081C703 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				64E952D529EE31240081C703 /* JWPUBParser */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		64E952D429EE31240081C703 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64E952E129EE31250081C703 /* Preview Assets.xcassets in Resources */,
+				64E952DE29EE31250081C703 /* Assets.xcassets in Resources */,
+				64E952EC29EE32DD0081C703 /* nwt_E.jwpub in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64E952D229EE31240081C703 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6490A3E32A3BF9F000C59D40 /* JWTest.swift in Sources */,
+				64E952F429EF63DD0081C703 /* Manifest.swift in Sources */,
+				64E952F629EF747A0081C703 /* DBService.swift in Sources */,
+				6490A3F22A3E3D4000C59D40 /* Publication.swift in Sources */,
+				6490A3EE2A3E3A3D00C59D40 /* Extension+Publication.swift in Sources */,
+				64E952EF29EF5C570081C703 /* Models.swift in Sources */,
+				6490A3E72A3C9B9A00C59D40 /* MCLDeobfuscator.m in Sources */,
+				64E952F829EF878E0081C703 /* Extension.swift in Sources */,
+				64E952DC29EE31240081C703 /* ContentView.swift in Sources */,
+				64E952FD29F0A1A40081C703 /* Crypto.swift in Sources */,
+				64E952DA29EE31240081C703 /* JWPUBParserApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		64E952E329EE31250081C703 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "JWPUBParser-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		64E952E429EE31250081C703 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "JWPUBParser-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		64E952E629EE31250081C703 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = JWPUBParser/JWPUBParser.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"JWPUBParser/Preview Content\"";
+				DEVELOPMENT_TEAM = FUU334NWUK;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appyweb.JWPUBParser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "JWPUBParser-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		64E952E729EE31250081C703 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = JWPUBParser/JWPUBParser.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"JWPUBParser/Preview Content\"";
+				DEVELOPMENT_TEAM = FUU334NWUK;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appyweb.JWPUBParser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "JWPUBParser-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64E952D129EE31240081C703 /* Build configuration list for PBXProject "JWPUBParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64E952E329EE31250081C703 /* Debug */,
+				64E952E429EE31250081C703 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64E952E529EE31250081C703 /* Build configuration list for PBXNativeTarget "JWPUBParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64E952E629EE31250081C703 /* Debug */,
+				64E952E729EE31250081C703 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6490A3E92A3D629B00C59D40 /* XCRemoteSwiftPackageReference "GzipSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/1024jp/GzipSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.1;
+			};
+		};
+		64E952E829EE327F0081C703 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.16;
+			};
+		};
+		64E952F029EF5D970081C703 /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.1;
+			};
+		};
+		64E952F929F09AB30081C703 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		64E9530229F4CBC80081C703 /* XCRemoteSwiftPackageReference "DataCompression" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mw99/DataCompression";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6490A3EA2A3D629B00C59D40 /* Gzip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6490A3E92A3D629B00C59D40 /* XCRemoteSwiftPackageReference "GzipSwift" */;
+			productName = Gzip;
+		};
+		64E952E929EE327F0081C703 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64E952E829EE327F0081C703 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+		64E952F129EF5D970081C703 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64E952F029EF5D970081C703 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+		64E952FA29F09AB30081C703 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64E952F929F09AB30081C703 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+		64E9530329F4CBC80081C703 /* DataCompression */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64E9530229F4CBC80081C703 /* XCRemoteSwiftPackageReference "DataCompression" */;
+			productName = DataCompression;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 64E952CE29EE31240081C703 /* Project object */;
+}
