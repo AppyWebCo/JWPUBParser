@@ -95,8 +95,13 @@ struct ContentView: View {
         let parser = JWPUBParser.shared
         do {
             if let publication = try await parser.read(at: file, progress: parentProgress) {
+                
                 if let bible = publication as? JWPBible {
-                    print(bible.title)
+                    print(bible.books.first?.chapters.first?.content ?? "")
+                }
+                
+                if let mwp = publication as? JWPMeetingWorkBook {
+                    print(mwp.weeks.first?.subtitle ?? "")
                 }
             }
         } catch {

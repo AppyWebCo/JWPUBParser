@@ -7,6 +7,7 @@
 
 import Foundation
 import SQLite
+import CloudKitMacro
 
 public protocol JWPUBObject {
     
@@ -29,7 +30,7 @@ struct Asset {
     }
 }
 
-
+@CloudKitRecord
 struct BibleBook {
     let bibleBookId: Int
     let bookDocumentId: Int
