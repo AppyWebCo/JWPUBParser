@@ -8,7 +8,7 @@
 import Foundation
 import SQLite
 
-extension Publication {
+extension ManifestPublication {
     
     func extract(content: Data) -> Data? {
         
@@ -19,7 +19,7 @@ extension Publication {
             contentKey = "\(language)_\(symbol)_\(year)_\(issueId)"
         }
         
-        guard let deob = MCLDeobfuscator(key: contentKey) else {
+        guard let deob = JWPDeobfuscator(key: contentKey) else {
             fatalError("could not run deobfuscator :(")
         }
         
@@ -38,14 +38,5 @@ extension Publication {
         }
     }
     
-//    public func getDBInfo(from connection: Connection) {
-//        do {
-//            if let _publication = try connection.pluck(self.publicationsTable) {
-//                
-//            }
-//        } catch {
-//            
-//        }
-//    }
 
 }
