@@ -7,7 +7,7 @@
 
 #ifndef JWPUBParser_Bridging_Header_h
 #define JWPUBParser_Bridging_Header_h
-#import "MCLDeobfuscator.h"
+#import "JWPDeobfuscator.h"
 
 #endif /* JWPUBParser_Bridging_Header_h */
 

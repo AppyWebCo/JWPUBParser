@@ -8,6 +8,12 @@
 import Foundation
 import SQLite
 
+public protocol JWPUBObject {
+    
+    static func export(db: Connection, publication: ManifestPublication, progress: Progress) async throws -> Self
+    
+}
+
 struct Asset {
     let assetId: Int
     let filePath: String
@@ -27,14 +33,14 @@ struct Asset {
 struct BibleBook {
     let bibleBookId: Int
     let bookDocumentId: Int
-    let introDocumentId: Int
-    let overviewDocumentId: Int
-    let outlineDocumentId: Int
+    let introDocumentId: Int?
+    let overviewDocumentId: Int?
+    let outlineDocumentId: Int?
     let profile: Data?
     let bookDisplayTitle: String
-    let bookDisplayTitleRich: String
+    let bookDisplayTitleRich: String?
     let chapterDisplayTitle: String
-    let chapterDisplayTitleRich: String
+    let chapterDisplayTitleRich: String?
     let publicationId: Int
     let firstVerseId: Int
     let lastVerseId: Int
@@ -44,18 +50,25 @@ struct BibleBook {
     init(row: Row) {
         bibleBookId = row[Expression<Int>("BibleBookId")]
         bookDocumentId = row[Expression<Int>("BookDocumentId")]
-        introDocumentId = row[Expression<Int>("IntroDocumentId")]
-        overviewDocumentId = row[Expression<Int>("OverviewDocumentId")]
-        outlineDocumentId = row[Expression<Int>("OutlineDocumentId")]
-        profile = Data(bytes: row[Expression<Blob>("Profile")].bytes, count: row[Expression<Blob>("Profile")].bytes.count)
+        introDocumentId = row[Expression<Int?>("IntroDocumentId")]
+        overviewDocumentId = row[Expression<Int?>("OverviewDocumentId")]
+        outlineDocumentId = row[Expression<Int?>("OutlineDocumentId")]
+        profile = row[Expression<Data?>("Profile")]
         bookDisplayTitle = row[Expression<String>("BookDisplayTitle")]
-        bookDisplayTitleRich = row[Expression<String>("BookDisplayTitleRich")]
+        bookDisplayTitleRich = row[Expression<String?>("BookDisplayTitleRich")]
         chapterDisplayTitle = row[Expression<String>("ChapterDisplayTitle")]
-        chapterDisplayTitleRich = row[Expression<String>("ChapterDisplayTitleRich")]
+        chapterDisplayTitleRich = row[Expression<String?>("ChapterDisplayTitleRich")]
         publicationId = row[Expression<Int>("PublicationId")]
         firstVerseId = row[Expression<Int>("FirstVerseId")]
         lastVerseId = row[Expression<Int>("LastVerseId")]
         hasCommentary = row[Expression<Bool>("HasCommentary")]
+    }
+    
+    static public let table = Table("BibleBook")
+    
+    static public func getRows(db: Connection) throws -> [Row] {
+        let all = Array(try db.prepare(Self.table))
+        return all
     }
 }
 
@@ -82,8 +95,8 @@ struct BibleChapter {
         bookNumber = row[Expression<Int>("BookNumber")]
         chapterNumber = row[Expression<Int>("ChapterNumber")]
         content = Data(bytes: row[Expression<Blob>("Content")].bytes, count: row[Expression<Blob>("Content")].bytes.count)
-        preContent = Data(bytes: row[Expression<Blob>("PreContent")].bytes, count: row[Expression<Blob>("PreContent")].bytes.count)
-        postContent = Data(bytes: row[Expression<Blob>("PostContent")].bytes, count: row[Expression<Blob>("PostContent")].bytes.count)
+        preContent = row[Expression<Data?>("PreContent")]
+        postContent = row[Expression<Data?>("PostContent")]
         firstVerseId = row[Expression<Int>("FirstVerseId")]
         lastVerseId = row[Expression<Int>("LastVerseId")]
         firstFootnoteId = row[Expression<Int?>("FirstFootnoteId")]
@@ -92,6 +105,13 @@ struct BibleChapter {
         lastBibleCitationId = row[Expression<Int?>("LastBibleCitationId")]
         firstParagraphOrdinal = row[Expression<Int?>("FirstParagraphOrdinal")]
         lastParagraphOrdinal = row[Expression<Int?>("LastParagraphOrdinal")]
+    }
+    
+    static public let table = Table("BibleChapter")
+    
+    static public func getRows(db: Connection) throws -> [Row] {
+        let all = Array(try db.prepare(Self.table))
+        return all
     }
 }
 
@@ -192,11 +212,11 @@ struct BiblePublication {
 }
 
 
-struct BibleVerse {
+public struct BibleVerse {
     let bibleVerseId: Int
     let label: String
     let content: Data
-    let adjustmentInfo: Data
+    let adjustmentInfo: Data?
     let beginParagraphOrdinal: Int
     let endParagraphOrdinal: Int
 
@@ -205,9 +225,16 @@ struct BibleVerse {
         bibleVerseId = row[Expression<Int>("BibleVerseId")]
         label = row[Expression<String>("Label")]
         content = row[Expression<Data>("Content")]
-        adjustmentInfo = row[Expression<Data>("AdjustmentInfo")]
+        adjustmentInfo = row[Expression<Data?>("AdjustmentInfo")]
         beginParagraphOrdinal = row[Expression<Int>("BeginParagraphOrdinal")]
         endParagraphOrdinal = row[Expression<Int>("EndParagraphOrdinal")]
+    }
+    
+    static public let table = Table("BibleVerse")
+    
+    static public func getRows(db: Connection) throws -> [Row] {
+        let all = Array(try db.prepare(Self.table))
+        return all
     }
 }
 
@@ -267,7 +294,7 @@ struct Document: Codable {
     var publicationId: Int
     var mepsDocumentId: Int?
     var mepsLanguageIndex: Int?
-    var classType: String?
+    var classType: Int?
     var type: Int?
     var sectionNumber: Int?
     var chapterNumber: Int?
@@ -297,39 +324,48 @@ struct Document: Codable {
     var preferredPresentation: String?
     var contentReworkedDate: String?
     var hasPronunciationGuide: Bool?
+
     
-    static let tableName = "Document"
-    static let documentId = Expression<Int>("DocumentId")
-    static let publicationId = Expression<Int>("PublicationId")
-    static let mepsDocumentId = Expression<Int?>("MepsDocumentId")
-    static let mepsLanguageIndex = Expression<Int?>("MepsLanguageIndex")
-    static let classType = Expression<String?>("Class")
-    static let type = Expression<Int?>("Type")
-    static let sectionNumber = Expression<Int?>("SectionNumber")
-    static let chapterNumber = Expression<Int?>("ChapterNumber")
-    static let title = Expression<String?>("Title")
-    static let titleRich = Expression<String?>("TitleRich")
-    static let tocTitle = Expression<String?>("TocTitle")
-    static let tocTitleRich = Expression<String?>("TocTitleRich")
-    static let contextTitle = Expression<String?>("ContextTitle")
-    static let contextTitleRich = Expression<String?>("ContextTitleRich")
-    static let featureTitle = Expression<String?>("FeatureTitle")
-    static let featureTitleRich = Expression<String?>("FeatureTitleRich")
-    static let subtitle = Expression<String?>("Subtitle")
-    static let subtitleRich = Expression<String?>("SubtitleRich")
-    static let featureSubtitle = Expression<String?>("FeatureSubtitle")
-    static let featureSubtitleRich = Expression<String?>("FeatureSubtitleRich")
-    static let content = Expression<Data?>("Content")
-    static let firstFootnoteId = Expression<Int?>("FirstFootnoteId")
-    static let lastFootnoteId = Expression<Int?>("LastFootnoteId")
-    static let firstBibleCitationId = Expression<Int?>("FirstBibleCitationId")
-    static let lastBibleCitationId = Expression<Int?>("LastBibleCitationId")
-    static let paragraphCount = Expression<Int?>("ParagraphCount")
-    static let hasMediaLinks = Expression<Bool?>("HasMediaLinks")
-    static let hasLinks = Expression<Bool?>("HasLinks")
-    static let firstPageNumber = Expression<Int?>("FirstPageNumber")
-    static let lastPageNumber = Expression<Int?>("LastPageNumber")
-    static let contentLength = Expression<Int?>("ContentLength")
-    static let preferredPresentation = Expression<String?>("PreferredPresentation")
-    static let contentReworkedDate = Expression<String?>("ContentReworkedDate")
+    init(row: Row) throws {
+         documentId = row[Expression<Int>("DocumentId")]
+         publicationId = row[Expression<Int>("PublicationId")]
+         mepsDocumentId = row[Expression<Int?>("MepsDocumentId")]
+         mepsLanguageIndex = row[Expression<Int?>("MepsLanguageIndex")]
+         classType = row[Expression<Int?>("Class")]
+         type = row[Expression<Int?>("Type")]
+         sectionNumber = row[Expression<Int?>("SectionNumber")]
+         chapterNumber = row[Expression<Int?>("ChapterNumber")]
+         title = row[Expression<String?>("Title")]
+         titleRich = row[Expression<String?>("TitleRich")]
+         tocTitle = row[Expression<String?>("TocTitle")]
+         tocTitleRich = row[Expression<String?>("TocTitleRich")]
+         contextTitle = row[Expression<String?>("ContextTitle")]
+         contextTitleRich = row[Expression<String?>("ContextTitleRich")]
+         featureTitle = row[Expression<String?>("FeatureTitle")]
+         featureTitleRich = row[Expression<String?>("FeatureTitleRich")]
+         subtitle = row[Expression<String?>("Subtitle")]
+         subtitleRich = row[Expression<String?>("SubtitleRich")]
+         featureSubtitle = row[Expression<String?>("FeatureSubtitle")]
+         featureSubtitleRich = row[Expression<String?>("FeatureSubtitleRich")]
+         content = row[Expression<Data?>("Content")]
+         firstFootnoteId = row[Expression<Int?>("FirstFootnoteId")]
+         lastFootnoteId = row[Expression<Int?>("LastFootnoteId")]
+         firstBibleCitationId = row[Expression<Int?>("FirstBibleCitationId")]
+         lastBibleCitationId = row[Expression<Int?>("LastBibleCitationId")]
+         paragraphCount = row[Expression<Int?>("ParagraphCount")]
+         hasMediaLinks = row[Expression<Bool?>("HasMediaLinks")]
+         hasLinks = row[Expression<Bool?>("HasLinks")]
+         firstPageNumber = row[Expression<Int?>("FirstPageNumber")]
+         lastPageNumber = row[Expression<Int?>("LastPageNumber")]
+         contentLength = row[Expression<Int?>("ContentLength")]
+         preferredPresentation = row[Expression<String?>("PreferredPresentation")]
+         contentReworkedDate = row[Expression<String?>("ContentReworkedDate")]
+    }
+    
+    static public let table = Table("Document")
+    static public let classType = Expression<Int>("Class")
+    static public func getRows(db: Connection, filter: Expression<Bool>) throws -> [Row] {
+        let all = Array(try db.prepare(Self.table.where(filter)))
+        return all
+    }
 }

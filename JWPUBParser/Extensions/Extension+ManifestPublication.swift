@@ -10,6 +10,19 @@ import SQLite
 
 extension ManifestPublication {
     
+    public enum ManifestPublicationType: String, CaseIterable {
+        
+        case bible = "bi"
+        case mwb = "mwb"
+        
+        static public var allCases: [ManifestPublication.ManifestPublicationType] {
+            return [.bible, .mwb]
+        }
+        
+        
+        
+    }
+    
     func extract(content: Data) -> Data? {
         
         var contentKey: String
@@ -36,6 +49,17 @@ extension ManifestPublication {
         } else {
             return "\(self.language)_\(self.symbol)_\(self.year)"
         }
+    }
+    
+    public func getPublicationType() throws -> ManifestPublicationType? {
+        
+        if let categories {
+            guard let category = ManifestPublicationType.allCases.first(where: { categories.contains($0.rawValue) }) else {
+                throw ParsingError.notFound
+            }
+            return category
+        }
+        return nil
     }
     
 

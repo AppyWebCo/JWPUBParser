@@ -8,10 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		6490A3E32A3BF9F000C59D40 /* JWTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490A3E22A3BF9F000C59D40 /* JWTest.swift */; };
-		6490A3E72A3C9B9A00C59D40 /* MCLDeobfuscator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6490A3E52A3C9B9A00C59D40 /* MCLDeobfuscator.m */; };
+		6490A3E72A3C9B9A00C59D40 /* JWPDeobfuscator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6490A3E52A3C9B9A00C59D40 /* JWPDeobfuscator.m */; };
 		6490A3EB2A3D629B00C59D40 /* Gzip in Frameworks */ = {isa = PBXBuildFile; productRef = 6490A3EA2A3D629B00C59D40 /* Gzip */; };
-		6490A3EE2A3E3A3D00C59D40 /* Extension+Publication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490A3ED2A3E3A3D00C59D40 /* Extension+Publication.swift */; };
-		6490A3F22A3E3D4000C59D40 /* Publication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490A3F12A3E3D4000C59D40 /* Publication.swift */; };
+		6490A3EE2A3E3A3D00C59D40 /* Extension+ManifestPublication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490A3ED2A3E3A3D00C59D40 /* Extension+ManifestPublication.swift */; };
+		6490A3F22A3E3D4000C59D40 /* ManifestPublication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490A3F12A3E3D4000C59D40 /* ManifestPublication.swift */; };
+		6490A3F62A3EB9E100C59D40 /* JWPUBParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490A3F52A3EB9E100C59D40 /* JWPUBParser.swift */; };
+		6490A3F82A3F85E900C59D40 /* JWPBible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490A3F72A3F85E900C59D40 /* JWPBible.swift */; };
+		6490A3FB2A3F8D7D00C59D40 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 6490A3FA2A3F8D7D00C59D40 /* SwiftSoup */; };
+		6490A3FD2A3F8D8700C59D40 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490A3FC2A3F8D8700C59D40 /* HTMLParser.swift */; };
+		6490A3FF2A3F978C00C59D40 /* JWPMeetingWorkBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490A3FE2A3F978C00C59D40 /* JWPMeetingWorkBook.swift */; };
+		6490A4022A3FBFE100C59D40 /* Catalog in Frameworks */ = {isa = PBXBuildFile; productRef = 6490A4012A3FBFE100C59D40 /* Catalog */; };
 		64E952DA29EE31240081C703 /* JWPUBParserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E952D929EE31240081C703 /* JWPUBParserApp.swift */; };
 		64E952DC29EE31240081C703 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E952DB29EE31240081C703 /* ContentView.swift */; };
 		64E952DE29EE31250081C703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64E952DD29EE31250081C703 /* Assets.xcassets */; };
@@ -30,10 +36,14 @@
 
 /* Begin PBXFileReference section */
 		6490A3E22A3BF9F000C59D40 /* JWTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTest.swift; sourceTree = "<group>"; };
-		6490A3E52A3C9B9A00C59D40 /* MCLDeobfuscator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLDeobfuscator.m; sourceTree = "<group>"; };
-		6490A3E62A3C9B9A00C59D40 /* MCLDeobfuscator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLDeobfuscator.h; sourceTree = "<group>"; };
-		6490A3ED2A3E3A3D00C59D40 /* Extension+Publication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Publication.swift"; sourceTree = "<group>"; };
-		6490A3F12A3E3D4000C59D40 /* Publication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publication.swift; sourceTree = "<group>"; };
+		6490A3E52A3C9B9A00C59D40 /* JWPDeobfuscator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPDeobfuscator.m; sourceTree = "<group>"; };
+		6490A3E62A3C9B9A00C59D40 /* JWPDeobfuscator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPDeobfuscator.h; sourceTree = "<group>"; };
+		6490A3ED2A3E3A3D00C59D40 /* Extension+ManifestPublication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+ManifestPublication.swift"; sourceTree = "<group>"; };
+		6490A3F12A3E3D4000C59D40 /* ManifestPublication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestPublication.swift; sourceTree = "<group>"; };
+		6490A3F52A3EB9E100C59D40 /* JWPUBParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWPUBParser.swift; sourceTree = "<group>"; };
+		6490A3F72A3F85E900C59D40 /* JWPBible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWPBible.swift; sourceTree = "<group>"; };
+		6490A3FC2A3F8D8700C59D40 /* HTMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParser.swift; sourceTree = "<group>"; };
+		6490A3FE2A3F978C00C59D40 /* JWPMeetingWorkBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWPMeetingWorkBook.swift; sourceTree = "<group>"; };
 		64E952D629EE31240081C703 /* JWPUBParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWPUBParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64E952D929EE31240081C703 /* JWPUBParserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWPUBParserApp.swift; sourceTree = "<group>"; };
 		64E952DB29EE31240081C703 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,8 +67,10 @@
 				64E952F229EF5D970081C703 /* SQLite in Frameworks */,
 				6490A3EB2A3D629B00C59D40 /* Gzip in Frameworks */,
 				64E952EA29EE327F0081C703 /* ZIPFoundation in Frameworks */,
+				6490A4022A3FBFE100C59D40 /* Catalog in Frameworks */,
 				64E952FB29F09AB30081C703 /* CryptoSwift in Frameworks */,
 				64E9530429F4CBC80081C703 /* DataCompression in Frameworks */,
+				6490A3FB2A3F8D7D00C59D40 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +80,8 @@
 		6490A3E42A3C9B8800C59D40 /* MEPS */ = {
 			isa = PBXGroup;
 			children = (
-				6490A3E62A3C9B9A00C59D40 /* MCLDeobfuscator.h */,
-				6490A3E52A3C9B9A00C59D40 /* MCLDeobfuscator.m */,
+				6490A3E62A3C9B9A00C59D40 /* JWPDeobfuscator.h */,
+				6490A3E52A3C9B9A00C59D40 /* JWPDeobfuscator.m */,
 			);
 			path = MEPS;
 			sourceTree = "<group>";
@@ -77,9 +89,26 @@
 		6490A3EC2A3E3A1500C59D40 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				6490A3ED2A3E3A3D00C59D40 /* Extension+Publication.swift */,
+				6490A3ED2A3E3A3D00C59D40 /* Extension+ManifestPublication.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6490A3F32A3EB9B200C59D40 /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				6490A3F42A3EB9C900C59D40 /* Utilities */,
+			);
+			path = Package;
+			sourceTree = "<group>";
+		};
+		6490A3F42A3EB9C900C59D40 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6490A3F52A3EB9E100C59D40 /* JWPUBParser.swift */,
+				6490A3FC2A3F8D8700C59D40 /* HTMLParser.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		64E952CD29EE31240081C703 = {
@@ -102,6 +131,7 @@
 		64E952D829EE31240081C703 /* JWPUBParser */ = {
 			isa = PBXGroup;
 			children = (
+				6490A3F32A3EB9B200C59D40 /* Package */,
 				6490A3EC2A3E3A1500C59D40 /* Extensions */,
 				6490A3E42A3C9B8800C59D40 /* MEPS */,
 				64E952ED29EF5C410081C703 /* models */,
@@ -132,7 +162,9 @@
 			children = (
 				64E952EE29EF5C570081C703 /* Models.swift */,
 				64E952F329EF63DD0081C703 /* Manifest.swift */,
-				6490A3F12A3E3D4000C59D40 /* Publication.swift */,
+				6490A3F12A3E3D4000C59D40 /* ManifestPublication.swift */,
+				6490A3F72A3F85E900C59D40 /* JWPBible.swift */,
+				6490A3FE2A3F978C00C59D40 /* JWPMeetingWorkBook.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -159,6 +191,8 @@
 				64E952FA29F09AB30081C703 /* CryptoSwift */,
 				64E9530329F4CBC80081C703 /* DataCompression */,
 				6490A3EA2A3D629B00C59D40 /* Gzip */,
+				6490A3FA2A3F8D7D00C59D40 /* SwiftSoup */,
+				6490A4012A3FBFE100C59D40 /* Catalog */,
 			);
 			productName = JWPUBParser;
 			productReference = 64E952D629EE31240081C703 /* JWPUBParser.app */;
@@ -196,6 +230,8 @@
 				64E952F929F09AB30081C703 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 				64E9530229F4CBC80081C703 /* XCRemoteSwiftPackageReference "DataCompression" */,
 				6490A3E92A3D629B00C59D40 /* XCRemoteSwiftPackageReference "GzipSwift" */,
+				6490A3F92A3F8D7D00C59D40 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				6490A4002A3FBFE100C59D40 /* XCRemoteSwiftPackageReference "jwl-catalog-swift" */,
 			);
 			productRefGroup = 64E952D729EE31240081C703 /* Products */;
 			projectDirPath = "";
@@ -224,17 +260,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6490A3F82A3F85E900C59D40 /* JWPBible.swift in Sources */,
 				6490A3E32A3BF9F000C59D40 /* JWTest.swift in Sources */,
+				6490A3F62A3EB9E100C59D40 /* JWPUBParser.swift in Sources */,
 				64E952F429EF63DD0081C703 /* Manifest.swift in Sources */,
 				64E952F629EF747A0081C703 /* DBService.swift in Sources */,
-				6490A3F22A3E3D4000C59D40 /* Publication.swift in Sources */,
-				6490A3EE2A3E3A3D00C59D40 /* Extension+Publication.swift in Sources */,
+				6490A3F22A3E3D4000C59D40 /* ManifestPublication.swift in Sources */,
+				6490A3EE2A3E3A3D00C59D40 /* Extension+ManifestPublication.swift in Sources */,
 				64E952EF29EF5C570081C703 /* Models.swift in Sources */,
-				6490A3E72A3C9B9A00C59D40 /* MCLDeobfuscator.m in Sources */,
+				6490A3E72A3C9B9A00C59D40 /* JWPDeobfuscator.m in Sources */,
 				64E952F829EF878E0081C703 /* Extension.swift in Sources */,
 				64E952DC29EE31240081C703 /* ContentView.swift in Sources */,
+				6490A3FD2A3F8D8700C59D40 /* HTMLParser.swift in Sources */,
 				64E952FD29F0A1A40081C703 /* Crypto.swift in Sources */,
 				64E952DA29EE31240081C703 /* JWPUBParserApp.swift in Sources */,
+				6490A3FF2A3F978C00C59D40 /* JWPMeetingWorkBook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +484,22 @@
 				minimumVersion = 6.0.1;
 			};
 		};
+		6490A3F92A3F8D7D00C59D40 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
+		6490A4002A3FBFE100C59D40 /* XCRemoteSwiftPackageReference "jwl-catalog-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://dev.azure.com/whqmeps/MEPS/_git/jwl-catalog-swift/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
 		64E952E829EE327F0081C703 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
@@ -483,6 +539,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6490A3E92A3D629B00C59D40 /* XCRemoteSwiftPackageReference "GzipSwift" */;
 			productName = Gzip;
+		};
+		6490A3FA2A3F8D7D00C59D40 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6490A3F92A3F8D7D00C59D40 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		6490A4012A3FBFE100C59D40 /* Catalog */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6490A4002A3FBFE100C59D40 /* XCRemoteSwiftPackageReference "jwl-catalog-swift" */;
+			productName = Catalog;
 		};
 		64E952E929EE327F0081C703 /* ZIPFoundation */ = {
 			isa = XCSwiftPackageProductDependency;

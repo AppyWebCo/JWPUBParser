@@ -1,16 +1,13 @@
 //
-//  MCLDeobfuscator.m
-//  MEPSCommon
+//  JWPDeobfuscator.m
 //
-//  Created on 5/23/17.
-//  Copyright © 2017 Watch Tower Bible and Tract Society of Pennsylvania, Inc. All rights reserved.
 //
 
-#import "MCLDeobfuscator.h"
+#import "JWPDeobfuscator.h"
 #import <CommonCrypto/CommonCrypto.h>
 #import <zlib.h>
 
-@implementation MCLDeobfuscator
+@implementation JWPDeobfuscator
 {
     unsigned char _key[kCCKeySizeAES128];
     unsigned char _iv[kCCKeySizeAES128];

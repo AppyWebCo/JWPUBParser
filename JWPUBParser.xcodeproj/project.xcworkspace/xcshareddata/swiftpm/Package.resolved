@@ -19,6 +19,15 @@
       }
     },
     {
+      "identity" : "grdb.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/groue/GRDB.swift",
+      "state" : {
+        "revision" : "284a4ee1acf9bf6c8b3d045494d0a7e3046ebf92",
+        "version" : "6.15.1"
+      }
+    },
+    {
       "identity" : "gzipswift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/1024jp/GzipSwift",
@@ -28,12 +37,30 @@
       }
     },
     {
+      "identity" : "jwl-catalog-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://dev.azure.com/whqmeps/MEPS/_git/jwl-catalog-swift/",
+      "state" : {
+        "revision" : "10498f740c6fd456fbf32fd9457d839855ebf8d4",
+        "version" : "1.2.0"
+      }
+    },
+    {
       "identity" : "sqlite.swift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/stephencelis/SQLite.swift",
       "state" : {
         "revision" : "7a2e3cd27de56f6d396e84f63beefd0267b55ccb",
         "version" : "0.14.1"
+      }
+    },
+    {
+      "identity" : "swiftsoup",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/scinfu/SwiftSoup",
+      "state" : {
+        "revision" : "0e96a20ffd37a515c5c963952d4335c89bed50a6",
+        "version" : "2.6.0"
       }
     },
     {

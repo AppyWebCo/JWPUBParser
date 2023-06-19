@@ -1,5 +1,5 @@
 //
-//  Publication.swift
+//  ManifestPublication.swift
 //  JWPUBParser
 //
 //  Created by Manuel De Freitas on 6/17/23.
@@ -9,7 +9,7 @@
 import Foundation
 import SQLite
 
-public struct Publication: Codable {
+public struct ManifestPublication: Codable {
     var language: Int
     var symbol: String
     var issueTag: Int?
@@ -41,11 +41,6 @@ public struct Publication: Codable {
     let rootYear: Int?
     let rootLanguage: Int?
     let image: [ManifestImage]?
-    
-    static let publicationsTable = Table("Publication")
-    static let language = Expression<Int>("MepsLanguageIndex")
-    static let symbol = Expression<Int>("Symbol")
-    static let year = Expression<Int?>("Year")
-    static let issueTag = Expression<Int?>("IssueTagNumber")
+    let categories: [String]?
     
 }

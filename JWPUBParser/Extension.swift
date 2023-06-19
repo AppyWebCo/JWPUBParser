@@ -102,3 +102,12 @@ public extension Data {
     }
 
 }
+
+extension Double {
+    func getPercentage() -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .percent
+        formatter.maximumFractionDigits = 0 // You can set what you want
+        return formatter.string(from: NSNumber(value: Int64(self))) ?? ""
+    }
+}

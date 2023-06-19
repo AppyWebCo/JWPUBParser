@@ -14,7 +14,7 @@ class DBService {
     
     public static let shared = DBService()
     
-    func read(url: URL, manifest: Publication, fileName: String) {
+    func read(url: URL, manifest: ManifestPublication, fileName: String) {
         
         do {
     

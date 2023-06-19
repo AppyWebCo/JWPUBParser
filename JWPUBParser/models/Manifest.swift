@@ -7,9 +7,7 @@
 
 import Foundation
 
-
-
-struct ManifestImage: Codable {
+public struct ManifestImage: Codable {
     let signature: String?
     let fileName: String?
     let type: String?
@@ -18,7 +16,7 @@ struct ManifestImage: Codable {
     let height: Int?
 }
 
-struct Manifest: Codable {
+public struct Manifest: Codable {
     let name: String?
     let hash: String?
     let timestamp: String?
@@ -28,5 +26,5 @@ struct Manifest: Codable {
     let htmlValidated: Bool?
     let mepsPlatformVersion: Double?
     let mepsBuildNumber: Int?
-    let publication: Publication?
+    let publication: ManifestPublication?
 }

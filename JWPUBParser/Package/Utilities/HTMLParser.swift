@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import SwiftSoup
+
+public class HTMLParser {
+    
+    static public var shared = HTMLParser()
+    
+    func parseInnerText(from html: String) throws -> String {
+        let doc: SwiftSoup.Document = try SwiftSoup.parse(html)
+        return try doc.text(trimAndNormaliseWhitespace: true)
+    }
+    
+}

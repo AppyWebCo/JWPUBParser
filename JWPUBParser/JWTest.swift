@@ -33,7 +33,7 @@ let secret: [UInt8] = {
     return [UInt8](data)
 }()
 
-extension Publication {
+extension ManifestPublication {
     func decryptContent(encryptedContent: [UInt8]) -> String {
         var contentKey: String
         if issueTag == 0 {
