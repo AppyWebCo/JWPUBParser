@@ -88,6 +88,8 @@ struct ContentView: View {
                 Task {
                     await unzip(url)
                 }
+            } catch let error as ParsingError {
+                print(error.description)
             } catch {
                 print(error.localizedDescription)
             }

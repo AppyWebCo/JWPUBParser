@@ -9,6 +9,9 @@
 import Foundation
 import SQLite
 import SwiftUI
+import DataCompression
+import Zlib
+import Compression
 
 
 enum ParsingError: Error {
@@ -146,17 +149,89 @@ public actor JWPUBParser {
             contentKey = "\(publication.language)_\(publication.symbol)_\(publication.year)_\(publication.issueId)"
         }
         
-        guard let deob = JWPDeobfuscator(key: contentKey) else {
-            throw ParsingError.couldNotDecryptData
-        }
-        
-        if let data = deob.apply(encryptedData) {
+        let deob = JWPDeobfuscatorSwift(contentKey: contentKey)
+    
+        if let encryptedData, let data = deob.apply(protectedData: encryptedData) {
+            
             let string = String(decoding: data, as: UTF8.self)
+            print(string)
+           
             return string
         } else {
+            print("Could not decrypt data")
             throw ParsingError.couldNotDecryptData
         }
     }
     
 }
 
+
+
+import Foundation
+import CommonCrypto
+import zlib
+import CryptoKit
+
+
+
+class JWPDeobfuscatorSwift {
+    private var key = [UInt8](repeating: 0, count: kCCKeySizeAES128)
+    private var iv = [UInt8](repeating: 0, count: kCCKeySizeAES128)
+    
+    init(contentKey: String) {
+   
+        let dummy: [UInt8] = {
+            let hexString = "11CBB5587E32846D4C26790C633DA289F66FE5842A3A585CE1BC3A294AF5ADA7"
+            let data = Data(hexEncodedString: hexString)
+            return [UInt8](data ?? Data())
+        }()
+            
+        let contentKeyData = Data(contentKey.utf8)
+        
+        // Generate the base SHA256 hash
+        var temp = [UInt8](repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
+        let tempLength = Int(CC_SHA256_DIGEST_LENGTH)
+        let keyUTF8 = contentKey.utf8CString
+        CC_SHA256(keyUTF8.map { $0 }, CC_LONG(strlen(keyUTF8.map { $0 })), &temp)
+        
+        // Prepare key and iv
+        for i in 0..<tempLength / 2 {
+            self.key[i] = UInt8(dummy[i]) ^ temp[i]
+            self.iv[i] = UInt8(dummy[i + tempLength / 2]) ^ temp[i + tempLength / 2]
+        }
+    }
+    
+    func apply(protectedData: Data) -> Data? {
+
+        if let decryptedData = decrypt(with: protectedData) {
+            return decryptedData.decompressed
+        }
+        return nil
+    }
+
+    func decrypt(with data: Data) -> Data? {
+        let bufferSize = data.count + kCCBlockSizeAES128
+        var buffer = [UInt8](repeating: 0, count: bufferSize)
+        
+        var numOfBytesDecrypted: size_t = 0
+        let status = data.withUnsafeBytes { dataBytes in
+            return CCCrypt(CCOperation(kCCDecrypt),
+                           CCAlgorithm(kCCAlgorithmAES128),
+                           CCOptions(kCCOptionPKCS7Padding),
+                           key, kCCKeySizeAES128,
+                           iv,
+                           dataBytes.baseAddress,
+                           data.count,
+                           &buffer,
+                           bufferSize,
+                           &numOfBytesDecrypted)
+        }
+    
+        if status == kCCSuccess {
+            return Data(bytes: buffer, count: numOfBytesDecrypted)
+        }
+        
+        return nil
+    }
+
+}

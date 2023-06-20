@@ -30,6 +30,7 @@
 		64E952F229EF5D970081C703 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 64E952F129EF5D970081C703 /* SQLite */; };
 		64E952FB29F09AB30081C703 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 64E952FA29F09AB30081C703 /* CryptoSwift */; };
 		64E9530429F4CBC80081C703 /* DataCompression in Frameworks */ = {isa = PBXBuildFile; productRef = 64E9530329F4CBC80081C703 /* DataCompression */; };
+		64EB545B2A420FD100851885 /* Zlib in Frameworks */ = {isa = PBXBuildFile; productRef = 64EB545A2A420FD100851885 /* Zlib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64E952F229EF5D970081C703 /* SQLite in Frameworks */,
+				64EB545B2A420FD100851885 /* Zlib in Frameworks */,
 				6490A3EB2A3D629B00C59D40 /* Gzip in Frameworks */,
 				64E952EA29EE327F0081C703 /* ZIPFoundation in Frameworks */,
 				64E952FB29F09AB30081C703 /* CryptoSwift in Frameworks */,
@@ -187,6 +189,7 @@
 				64E9530329F4CBC80081C703 /* DataCompression */,
 				6490A3EA2A3D629B00C59D40 /* Gzip */,
 				6490A3FA2A3F8D7D00C59D40 /* SwiftSoup */,
+				64EB545A2A420FD100851885 /* Zlib */,
 			);
 			productName = JWPUBParser;
 			productReference = 64E952D629EE31240081C703 /* JWPUBParser.app */;
@@ -225,6 +228,7 @@
 				64E9530229F4CBC80081C703 /* XCRemoteSwiftPackageReference "DataCompression" */,
 				6490A3E92A3D629B00C59D40 /* XCRemoteSwiftPackageReference "GzipSwift" */,
 				6490A3F92A3F8D7D00C59D40 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				64EB54592A420FD100851885 /* XCRemoteSwiftPackageReference "Zlib" */,
 			);
 			productRefGroup = 64E952D729EE31240081C703 /* Products */;
 			projectDirPath = "";
@@ -518,6 +522,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		64EB54592A420FD100851885 /* XCRemoteSwiftPackageReference "Zlib" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mezhevikin/Zlib.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -550,6 +562,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 64E9530229F4CBC80081C703 /* XCRemoteSwiftPackageReference "DataCompression" */;
 			productName = DataCompression;
+		};
+		64EB545A2A420FD100851885 /* Zlib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64EB54592A420FD100851885 /* XCRemoteSwiftPackageReference "Zlib" */;
+			productName = Zlib;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
