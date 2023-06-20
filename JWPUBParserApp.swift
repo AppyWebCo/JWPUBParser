@@ -13,5 +13,6 @@ struct JWPUBParserApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowStyle(.hiddenTitleBar)
     }
 }

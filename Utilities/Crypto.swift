@@ -86,10 +86,10 @@ func aesDecrypt(crypt: [UInt8], key: [UInt8], iv: [UInt8]) -> [UInt8]? {
     }
 }
 
-//func pkcs5Trimming(encrypt: [UInt8]) -> [UInt8] {
-//    let padding = Int(encrypt[encrypt.count - 1])
-//    return Array(encrypt.prefix(encrypt.count - padding))
-//}
+func pkcs5Trimming(encrypt: [UInt8]) -> [UInt8] {
+    let padding = Int(encrypt[encrypt.count - 1])
+    return Array(encrypt.prefix(encrypt.count - padding))
+}
 
 
 

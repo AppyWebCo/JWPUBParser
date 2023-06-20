@@ -45,7 +45,16 @@ struct ContentView: View {
     @State var parentProgress = Progress(totalUnitCount: 100)
     @State var observation: NSKeyValueObservation?
     
-   
+    func test() async {
+        do {
+            let client = JWPubMedia()
+            try await client.fetch()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+ 
     var body: some View {
     
         VStack {
@@ -63,6 +72,12 @@ struct ContentView: View {
                 present.toggle()
             }
             .padding(.top)
+            
+            Button("TEST") {
+                Task {
+                    await test()
+                }
+            }
 
         }
     
